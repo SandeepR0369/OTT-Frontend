@@ -1,0 +1,56 @@
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: "Arial", sans-serif; /* Use a clean, modern font */
+  background-color: black; /* Global app background */
+  color: white; /* Default text color */
+}
+
+/* Set default styles for the body */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000; /* Background black for a cinematic feel */
+}
+
+/* Reusable classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+  font-family: "Arial", sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e50914; /* Netflix red */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f40612;
+}

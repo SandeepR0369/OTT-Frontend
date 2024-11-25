@@ -1,0 +1,14 @@
+/* Movie Player Styles */
+
+.movie-player-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .movie-player-container video {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
