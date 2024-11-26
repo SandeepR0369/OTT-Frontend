@@ -1,73 +1,170 @@
-/* Landing Page Styles */
-
-/* Background with movie collage */
-.landing-container {
-    background-image: url("/bg-movie-collage.jpg"); /* Reference to the image in the public folder */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-}
-  
-  /* Logo */
-  .logo-container {
-    text-align: center;
-    margin-bottom: 20px;
   }
   
-  .logo {
-    width: 200px;
-  }
-  
-  /* Sign-In Form */
-  .signin-form {
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  .landing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
   }
   
-  .form-title {
-    text-align: center;
+  /* Title */
+  .title {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    font-weight: bold;
+    text-align: center;
+    color: #e50914; /* Netflix red */
   }
   
-  .sign-in-btn {
-    background-color: #e50914; /* Netflix red */
+  /* Search Bar */
+  .search-container {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+  }
+  
+  .search-button {
+    background-color: #e50914;
     color: white;
-    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
-  .sign-in-btn:hover {
+  .search-button:hover {
     background-color: #f40612;
   }
   
-  .additional-options {
+  /* Movies Grid */
+  .movies-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
   }
   
-  .forgot-password {
-    color: #b3b3b3;
+  .movie-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .movie-card:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  /* Modal */
+  .movie-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    position: relative;
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
   }
   
-  .signup-link {
-    margin-top: 20px;
+  .movie-player {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
   
-  .signup-link a {
+  .video-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .control-button {
+    background-color: #e50914;
     color: white;
-    font-weight: bold;
-    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .control-button:hover {
+    background-color: #f40612;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .movies-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .movie-card {
+      width: 90%;
+    }
+  
+    .search-input {
+      width: 80%;
+    }
   }
   
